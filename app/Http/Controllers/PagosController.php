@@ -10,17 +10,7 @@ use Session;
 
 class PagosController extends Controller
 {
-    protected $pagadito;
 
-    public function __construct()
-    {
-        include_once('lib/Pagadito.php');
-
-        define("UID", "1d759d1ffb903f0994847d0ad6c7fab7");
-        define("WSK", "34eb16028c0291c97d2dce55a0c67302");
-
-        $this->pagadito  = new Pagadito(UID, WSK);
-    }
 
 
     public function sendPago(Request $request){
