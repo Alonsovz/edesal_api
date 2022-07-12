@@ -21,4 +21,5 @@ Route::get('/', function () {
 use App\Http\Controllers\PagosController;
 
 Route::any('getStatus', 'App\Http\Controllers\PagosController@getStatus');
+Route::any('sendPago', 'App\Http\Controllers\PagosController@sendPago');
 
