@@ -95,23 +95,10 @@ class PagosController extends Controller
         $monto_factura = $pagado["total"];
 
 
-        $insert = app('firebase.firestore')->database()->collection('datos_facturacion')->newDocument();
-        $insert->set([
-            "ern" => $ern,
-            "estado" =>$estado,
-            "factelec" => 0,
-            "fecha" => $fecha,
-            "fuente_registro"=>"Pagadito",
-            "id_respuesta"=>$id_respuesta,
-            "monto_factura"=>  $monto_factura ,
-            "num_suministro"=> $num_suministro,
-            "periodo"=>$periodo,
-            "referencia"=>$referencia,
-            "token"=>  $token
-        ]);
 
 
-        return response()->json($insert);
+
+        return response()->json($request);
 
 
 
